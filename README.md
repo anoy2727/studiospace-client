@@ -1,7 +1,7 @@
 # StudioSpace
 
-**Live site:** https://YOUR-STUDIOSPACE.vercel.app  *(replace with your Vercel URL after deploying)*
-**API:** https://YOUR-STUDIOSPACE-API.onrender.com
+**Live site:** https://studiospace-client-gamma.vercel.app  
+**API:** https://studiospace-api-1fas.onrender.com
 
 StudioSpace is a peer-to-peer marketplace where creators book photo studios, sound stages, podcast lounges, music suites and art workshops by the hour, and hosts list their spaces and manage requests.
 
