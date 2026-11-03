@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-base-200 text-base-content font-sans antialiased; }
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .page-pad { @apply py-10 md:py-14; }
+  /* One heading style used for every section title across the site */
+  .section-title { @apply font-display text-3xl font-bold tracking-tight md:text-4xl; }
+  .section-sub { @apply mt-2 max-w-2xl text-base text-base-content/70 leading-relaxed; }
+  .field-label { @apply mb-1.5 block text-sm font-medium; }
+  .card-surface { @apply rounded-box border border-base-300 bg-base-100; }
+}
+
+/* The tally light: the small red dot found on every broadcast camera */
+.tally { width: .55rem; height: .55rem; border-radius: 9999px; background: #ff3b3b; box-shadow: 0 0 0 0 rgba(255,59,59,.6); animation: tally 2.2s ease-out infinite; }
+@keyframes tally { 70% { box-shadow: 0 0 0 .5rem rgba(255,59,59,0); } 100% { box-shadow: 0 0 0 0 rgba(255,59,59,0); } }
+
+.nav-link { position: relative; }
+.nav-link[data-active="true"]::after { content: ""; position: absolute; left: .75rem; right: .75rem; bottom: -2px; height: 2px; background: oklch(var(--p)); border-radius: 2px; }
+
+.hero-swiper .swiper-pagination-bullet { background: #fff; opacity: .5; width: 28px; height: 4px; border-radius: 2px; }
+.hero-swiper .swiper-pagination-bullet-active { opacity: 1; background: #fff; }
+.gallery-swiper .swiper-button-next, .gallery-swiper .swiper-button-prev { color: #fff; transform: scale(.6); }
+.gallery-swiper .swiper-pagination-bullet-active { background: #fff; }
+
+.skeleton-card { @apply card-surface overflow-hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tally { animation: none; }
+  html { scroll-behavior: auto; }
+}
